@@ -10,7 +10,7 @@ body {
 }
 
 html {
-  font: normal 20px sans-serif;
+  font: normal 18px sans-serif;
 }
 
 nav {
@@ -96,7 +96,7 @@ section {
   align-items: center;
   padding: 80px 80px;
 }
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   section {
     padding: 40px 40px;
   }
@@ -158,6 +158,12 @@ section p {
   background-color: #f7f7f7;
 }
 
+@media (max-width: 800px) {
+  .blog {
+    padding: 0.5em 0.5em;
+  }
+}
+
 .blog h3 {
   text-align: center;
 }
@@ -188,15 +194,24 @@ hr {
   min-height: 25%;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .card {
-    flex-basis: 100%;
+    flex-grow: 1;
+    font-size: 0.8em;
+    transition: 100ms ease-in;
   }
 }
 
 .card img {
-  min-width: 100%;
+  min-width: 25%;
   min-height: 25%;
+}
+
+@media (max-width: 800px) {
+  .card img {
+    min-width: 100%;
+    min-height: 25%;
+  }
 }
 
 .card-title {

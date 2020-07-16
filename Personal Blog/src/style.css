@@ -6,6 +6,7 @@
 
 body {
   display: block;
+  font-family: "Quicksand", sans-serif;
 }
 
 html {
@@ -21,12 +22,14 @@ a {
   color: inherit;
   cursor: pointer;
   opacity: 0.9;
-  transition: 500ms ease-in;
+  transition: 200ms ease-in;
 }
 a:hover {
   opacity: 1;
   font-weight: 900;
   text-decoration: none;
+  color: #ff6b6b;
+  cursor: pointer;
 }
 
 header {
@@ -57,10 +60,6 @@ header {
   header {
     padding: 20px 50px;
   }
-}
-
-header h2 {
-  font-family: "Quicksand", sans-serif;
 }
 
 @media (max-width: 700px) {
@@ -95,11 +94,11 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 125px 100px;
+  padding: 80px 80px;
 }
 @media (max-width: 600px) {
   section {
-    padding: 80px 80px;
+    padding: 40px 40px;
   }
 }
 
@@ -118,12 +117,10 @@ section {
 }
 
 .hero h1 {
-  font: bold 60px "Open Sans", sans-serif;
   margin-bottom: 15px;
 }
 
 .hero h3 {
-  font: normal 28px "Open Sans", sans-serif;
   margin-bottom: 40px;
 }
 
@@ -143,7 +140,6 @@ section {
 section h5.title {
   color: #414a4f;
   text-transform: capitalize;
-  font: bold 32px "Open Sans", sans-serif;
   margin-bottom: 35px;
 }
 
@@ -162,17 +158,43 @@ section p {
   background-color: #f7f7f7;
 }
 
+.blog h3 {
+  text-align: center;
+}
+hr {
+  width: 200px;
+  height: 2px;
+  border: 0;
+  margin-bottom: 80px;
+  background-color: black;
+}
+
+.grid-main {
+  min-width: 100vh;
+  min-height: 100vh;
+  grid-template-rows: 50% 50%;
+  grid-template-areas:
+    "upper upper upper"
+    "lower lower lower";
+}
+
 .card {
   flex-wrap: wrap;
   border-radius: 0.5em;
   margin: 1em;
   padding: 1em;
   background-color: white;
+  min-width: 30%;
+  min-height: 25%;
+}
+
+@media (max-width: 600px) {
+  flex-basis: 100%;
 }
 
 .card img {
-  width: 100%;
-  height: auto;
+  min-width: 100%;
+  min-height: 25%;
 }
 
 .card-title {
@@ -184,21 +206,25 @@ section p {
   text-align: left;
 }
 
-.container {
-  display: flex;
-  min-height: 100vh;
-  min-width: 100vh;
-  border: solid black;
-  justify-content: stretch;
+.card #one {
+  grid-area: upper;
+}
+.card #two {
+  grid-area: upper;
+}
+.card #three {
+  grid-area: upper;
+}
+.card #four {
+  grid-area: lower;
+}
+.card #five {
+  grid-area: lower;
+}
+.card #six {
+  grid-area: lower;
 }
 
-.special-notification .content {
-  background-color: red;
-}
-
-.social-distance {
-  min-width: 50%;
-}
 footer {
   display: flex;
   flex-direction: column;

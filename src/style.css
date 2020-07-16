@@ -189,7 +189,9 @@ hr {
 }
 
 @media (max-width: 600px) {
-  flex-basis: 100%;
+  .card {
+    flex-basis: 100%;
+  }
 }
 
 .card img {

@@ -200,6 +200,7 @@ hr {
   .card {
     flex-grow: 1;
     font-size: 0.8em;
+    padding: 0.5em;
     transition: 100ms ease-in;
   }
 }

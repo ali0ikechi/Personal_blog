@@ -161,6 +161,8 @@ section p {
 @media (max-width: 800px) {
   .blog {
     padding: 0.5em 0.5em;
+    flex-direction: column;
+    min-width: 100vh;
   }
 }
 

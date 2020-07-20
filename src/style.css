@@ -117,7 +117,9 @@ section {
 }
 
 .hero h1 {
+  font-size: 50px;
   margin-bottom: 15px;
+  font-weight: 300;
 }
 
 .hero h3 {
@@ -168,6 +170,7 @@ section p {
 
 .blog h3 {
   text-align: center;
+  margin-bottom: 20px;
 }
 hr {
   width: 200px;
@@ -177,76 +180,94 @@ hr {
   background-color: black;
 }
 
-.grid-main {
-  min-width: 100vh;
-  min-height: 100vh;
-  grid-template-rows: 50% 50%;
-  grid-template-areas:
-    "upper upper upper"
-    "lower lower lower";
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.btn {
+  color: black;
+  padding: 0.8rem;
+  font-size: 14px;
+  border-radius: 4px;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn:hover {
+  background-color: #ff6b6b;
+}
+
+.btn a:hover {
+  color: inherit;
+  transition: none;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards_item {
+  display: flex;
+  padding: 1rem;
+}
+
+@media (min-width: 40rem) {
+  .cards_item {
+    width: 50%;
+  }
+}
+
+@media (min-width: 56rem) {
+  .cards_item {
+    width: 33.3333%;
+  }
 }
 
 .card {
-  flex-wrap: wrap;
-  border-radius: 0.5em;
-  margin: 1em;
-  padding: 1em;
   background-color: white;
-  min-width: 30%;
-  min-height: 25%;
+  border-radius: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
-@media (max-width: 800px) {
-  .card {
-    flex-grow: 1;
-    font-size: 0.8em;
-    padding: 0.5em;
-    transition: 100ms ease-in;
-  }
+.card_content {
+  padding: 1rem;
 }
 
-.card img {
-  min-width: 25%;
-  min-height: 25%;
-}
-
-@media (max-width: 800px) {
-  .card img {
-    min-width: 100%;
-    min-height: 25%;
-  }
-}
-
-.card-title {
+.card_title {
+  font-size: 1rem;
   font-weight: 700;
-  font-size: 20px;
+  text-transform: capitalize;
+  margin: 0px;
+  text-align: left;
+  margin-bottom: 5px;
 }
 
-.card-text {
+.card_text {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  font-weight: 400;
   text-align: left;
 }
 
-.card #one {
-  grid-area: upper;
-}
-.card #two {
-  grid-area: upper;
-}
-.card #three {
-  grid-area: upper;
-}
-.card #four {
-  grid-area: lower;
-}
-.card #five {
-  grid-area: lower;
-}
-.card #six {
-  grid-area: lower;
-}
-
 .contact {
-  background-color: #f7f7f7;
+  background-color: white;
 }
 
 .contact form {
@@ -264,9 +285,11 @@ hr {
   margin-right: 30px;
   font-size: 18px;
   color: #555;
+  width: 60%;
 }
 @media (max-width: 800px) {
-  .contact form input {
+  .contact form input,
+  .contact form .btn {
     flex-basis: 100%;
     margin: 0 0 20px 0;
   }
@@ -275,6 +298,13 @@ hr {
 .contact form .btn {
   padding: 18px 42px;
   background-color: #ff6b6b;
+  width: 30%;
+  text-align: center;
+  font-weight: 500;
+}
+.contact form .btn:hover {
+  font-weight: 900;
+  color: inherit;
 }
 
 footer {

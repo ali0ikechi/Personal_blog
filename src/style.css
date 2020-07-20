@@ -124,6 +124,9 @@ section {
 
 .hero h3 {
   margin-bottom: 40px;
+  font-size: 40px;
+  font-weight: lighter;
+  opacity: 0.9;
 }
 
 .hero-content-area {

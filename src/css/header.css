@@ -1,0 +1,62 @@
+nav {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  opacity: 0.9;
+  transition: 200ms ease-in;
+}
+a:hover {
+  opacity: 1;
+  font-weight: 900;
+  text-decoration: none;
+  color: #ff6b6b;
+  cursor: pointer;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px 100px 0;
+  animation: 1s fadein 0.5s forwards;
+  z-index: 10;
+  color: black;
+}
+@keyframes fadein {
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+  }
+}
+@media (max-width: 1000px) {
+  header {
+    padding: 20px 50px;
+  }
+}
+
+@media (max-width: 700px) {
+  header h2 {
+    margin-bottom: 15px;
+  }
+}
+
+header nav {
+  display: flex;
+}
+
+header nav li {
+  margin: 0 15px;
+}

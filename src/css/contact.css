@@ -1,0 +1,47 @@
+.contact {
+  background-color: white;
+}
+
+.contact form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+  width: 80%;
+}
+
+.contact form input {
+  padding: 15px;
+  flex: 1;
+  margin-right: 30px;
+  font-size: 18px;
+  color: #555;
+  width: 60%;
+}
+@media (max-width: 800px) {
+  .contact form input,
+  .contact form .btn {
+    flex-basis: 100%;
+    margin: 0 0 20px 0;
+  }
+}
+
+.contact form .btn {
+  padding: 18px 42px;
+  background-color: #ff6b6b;
+  width: 30%;
+  text-align: center;
+  font-weight: 500;
+}
+.contact form .btn:hover {
+  font-weight: 900;
+  color: inherit;
+}
+hr {
+  width: 200px;
+  height: 2px;
+  border: 0;
+  margin-bottom: 80px;
+  background-color: black;
+}

@@ -44,18 +44,28 @@ section p {
   line-height: 2;
 }
 
-.blog {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  background-color: #f7f7f7;
+@media (min-width: 1200px) {
+  .blog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #f7f7f7;
+  }
 }
 
 @media (max-width: 800px) {
   .blog {
     padding: 0.5em 0.5em;
     flex-direction: column;
-    min-width: 100vh;
+    width: 100%;
+  }
+}
+
+@media (max-width: 300px) {
+  .blog {
+    padding: 0.5em 0.5em;
+    flex-direction: column;
+    width: 100%;
   }
 }
 
@@ -65,9 +75,37 @@ section p {
   margin-bottom: 20px;
 }
 
-.main {
-  max-width: 1200px;
-  margin: 0 auto;
+@media only screen and (min-width: 1000px) {
+  .blog-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px 40px;
+    max-width: 1200px;
+    margin: 50px auto;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .blog-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px 40px;
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .blog-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px 20px;
+    padding: 10px;
+  }
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
 }
 
 img {
@@ -149,4 +187,14 @@ img {
   margin-bottom: 1.25rem;
   font-weight: 400;
   text-align: left;
+}
+
+@media only screen and (max-width: 300px) {
+  .card_text {
+    font-size: 0.7rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+    font-weight: 400;
+    text-align: left;
+  }
 }

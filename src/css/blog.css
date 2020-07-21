@@ -1,0 +1,277 @@
+@import url("header.css");
+@import url("footer.css");
+@import url("contact.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: block;
+  font-family: "Quicksand", sans-serif;
+}
+
+html {
+  font: normal 18px sans-serif;
+}
+
+main {
+  display: block;
+  width: 100%;
+  margin-top: 20vh;
+}
+
+@media only screen and (min-width: 1200px) {
+  .post-container {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    margin: auto;
+  }
+}
+
+@media (min-width: 800px) {
+  .post-container {
+    max-width: inherit;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    margin: auto;
+  }
+}
+
+@media (max-width: 300px) {
+  .post-container {
+    max-width: inherit;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+.post-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media (min-width: 1200px) {
+  .post-content {
+    width: 90%;
+    padding: 10px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 800px) {
+  .post-content {
+    width: 80%;
+    padding: 10px;
+    margin: auto;
+  }
+}
+@media (max-width: 300px) {
+  .post-content {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+.post-header {
+  display: block;
+  padding: 0;
+  align-items: center;
+}
+
+@media (max-width: 800px) {
+  .post-header {
+    display: block;
+    padding: 0;
+    align-items: center;
+  }
+}
+
+@media (max-width: 800px) {
+  .post-header {
+    display: block;
+    padding: 0;
+    align-items: center;
+  }
+}
+
+.back {
+  margin-bottom: 10px;
+  font-size: 18px;
+  margin-left: 50px;
+}
+
+@media (max-width: 300px) {
+  .back {
+    margin-top: 20px;
+  }
+}
+
+.back a {
+  text-decoration: none;
+}
+
+.fa {
+  display: inline-block;
+  font-size: inherit;
+}
+
+figure {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 40px;
+  margin-inline-end: 40px;
+}
+
+.post-image img {
+  width: 80%;
+  height: 80%;
+  display: block;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
+@media (min-width: 1000px) {
+  .post-image img {
+    width: 50vh;
+    height: 65vh;
+  }
+}
+
+figcaption {
+  font-size: 5px;
+  font-weight: 300;
+  text-align: center;
+}
+
+@media only screen and (min-width: 1200px) {
+  .article {
+    padding: 40px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .article {
+    padding: 20px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .article {
+    padding: 10px;
+  }
+}
+
+.article h1 {
+  font-size: 30px;
+  font-weight: bold;
+  position: flex;
+  margin-bottom: 10px;
+}
+
+.article p {
+  font-weight: 300;
+  margin: 10px 0;
+}
+
+.author-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10vh;
+}
+
+@media (min-width: 700px) {
+  .author-section {
+    width: 100%;
+  }
+
+  @media (min-width: 300px) {
+    .author-section {
+      width: 100%;
+      height: 100%;
+      padding: 10px;
+    }
+  }
+}
+
+.author-avator {
+  justify-content: center;
+}
+
+@media (min-width: 100px) {
+  #author {
+    border-radius: 50px;
+    width: 20vh;
+    height: 20vh;
+    display: block;
+    margin: 0 auto;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 300px) {
+  #author {
+    border-radius: 50px;
+    width: 10vh;
+    height: 10vh;
+    size: cover;
+    display: block;
+    margin: 0 auto;
+    justify-content: center;
+  }
+}
+
+.post-author h4 {
+  margin-bottom: 10px;
+}
+
+.author-name {
+  margin-top: 10px;
+  font-weight: 700;
+}
+
+.profile {
+  display: flex;
+  margin: 10px;
+}
+
+@media (min-width: 1200px) {
+  .profile-content {
+    padding: 10px;
+    justify-content: center;
+    font-size: 0.7em;
+    margin: 0% 30%;
+  }
+}
+
+@media (max-width: 800px) {
+  .profile-content {
+    padding: 10px;
+    justify-content: center;
+    font-size: 0.7em;
+    margin: 0% 10%;
+  }
+}
+
+hr {
+  width: 200px;
+  height: 2px;
+  border: 0;
+  margin-bottom: 80px;
+  background-color: black;
+}
+
+#bold {
+  font-weight: bold;
+}
+
+#underline {
+  text-decoration: underline;
+}
